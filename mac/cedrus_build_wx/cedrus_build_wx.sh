@@ -2,7 +2,7 @@
 
 
 PATH_TO_THIS_SCRIPT=`pwd`
-PATH_TO_BINARIES_DIR="${PATH_TO_THIS_SCRIPT}/../wx_binaries/"
+PATH_TO_BINARIES_DIR="${PATH_TO_THIS_SCRIPT}/../binaries_wx/"
 
 ExportToEnvironment()
 {

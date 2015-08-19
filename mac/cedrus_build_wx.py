@@ -18,7 +18,7 @@ sys.path.insert(0, parentdir)
 import ced_py_utils
 
 wx_src_dir = os.path.abspath(os.getcwd() + '/../../wx_src')
-wx_binaries_dir = os.path.abspath(os.getcwd() + '/../../wx_binaries')
+binaries_wx_dir = os.path.abspath(os.getcwd() + '/../../binaries_wx')
 
 cedrus_build_script = os.path.abspath(
     os.getcwd() + '/cedrus_build_wx/cedrus_build_wx.sh')
@@ -32,7 +32,7 @@ ced_py_utils.verify_that_CWD_is_the_enclosing_folder_of_this_script()
 ced_py_utils.verify_absence_of_fink()
 ced_py_utils.verify_absence_of_homebrew()
 ced_py_utils.enforce_dir_exists(wx_src_dir)
-ced_py_utils.enforce_dir_exists(wx_binaries_dir)
+ced_py_utils.enforce_dir_exists(binaries_wx_dir)
 
 # Second section:  begin actual work towards building wx binaries
 
