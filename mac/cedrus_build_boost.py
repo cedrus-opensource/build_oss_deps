@@ -22,10 +22,8 @@ boost_binaries_dir = os.path.abspath(os.getcwd() + '/../../binaries_boost')
 
 cedrus_build_script = os.path.abspath(
     os.getcwd() + '/cedrus_build_boost/cedrus_build_boost.sh')
-cedrus_boost_patch_01 = os.path.abspath(
-    os.getcwd() + '/cedrus_build_boost/patch1_for_boost_8997c5e.patch')
-cedrus_boost_patch_02 = os.path.abspath(
-    os.getcwd() + '/cedrus_build_boost/patch2_for_boost_8997c5e.patch')
+cedrus_boost_patch = os.path.abspath(
+    os.getcwd() + '/cedrus_build_boost/patch_submodule_tools_build_1_58.patch')
 
 # First section:  do a bunch of sanity-checking
 ced_py_utils.verify_that_CWD_is_the_enclosing_folder_of_this_script()
@@ -57,21 +55,18 @@ ced_py_utils.enforce_dir_exists(boost_src_dir + '/libs/smart_ptr/include',
 
 # Third section:  begin actual work towards building boost binaries
 
-print('about to set the boost git repo to a specific commit.')
-ced_py_utils.git_repo_checkout_revision(boost_src_dir, '8997c5e69812bce6')
+print('about to set the boost git repo to a specific tag.')
+ced_py_utils.git_repo_checkout_revision(boost_src_dir, 'boost-1.58.0')
 print('about to sync boost submodules (one per boost lib).' +
       'This could take a minute...')
 ced_py_utils.git_submodule_update(boost_src_dir)
 
 shutil.copy2(cedrus_build_script, boost_src_dir)
-shutil.copy2(cedrus_boost_patch_01, boost_src_dir)
-shutil.copy2(cedrus_boost_patch_02, boost_src_dir)
+shutil.copy2(cedrus_boost_patch, boost_src_dir + '/tools/build')
 
 # if applying the patch FAILS, it could just mean that you already applied it. reset to a clean revision and try again.
-ced_py_utils.git_repo_apply_patch(boost_src_dir,
-                                  'patch1_for_boost_8997c5e.patch')
-ced_py_utils.git_repo_apply_patch(boost_src_dir,
-                                  'patch2_for_boost_8997c5e.patch')
+ced_py_utils.git_repo_apply_patch(boost_src_dir + '/tools/build',
+                                  'patch_submodule_tools_build_1_58.patch')
 
 ced_py_utils.exec_command_using_given_cwd('./cedrus_build_boost.sh',
                                           boost_src_dir)

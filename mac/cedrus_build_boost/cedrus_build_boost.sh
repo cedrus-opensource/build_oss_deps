@@ -17,18 +17,49 @@
 #    - program_options
 
 
-export BOOST_VERSION="1_50"
-export BOOST_VERSION_NAME="boost_${BOOST_VERSION}_0"
+BOOST_BINARIES_DIR="`pwd`/../binaries_boost/install"
 
-export BOOST="`pwd`/../binaries_boost"
-
-export BJAM_FLAGS=" toolset=clang-11 --build-type=complete --layout=versioned threading=multi link=shared runtime-link=shared release install "
-export WITH_WHICH_LIBS=" --with-chrono --with-date_time --with-filesystem --with-iostreams  --with-math  --with-regex --with-serialization --with-signals --with-system --with-thread --with-program_options "
-export BOOTSTRAP_LIBS=" --with-libraries=chrono,date_time,filesystem,iostreams,math,regex,serialization,signals,system,thread,program_options "
-
-DEST_DIR="$BOOST"/lib
+LIBS_DEST_DIR="$BOOST_BINARIES_DIR"/lib
 
 PATH_TO_THIS_SCRIPT=`pwd`
+
+WITH_WHICH_LIBS=" --with-chrono \
+--with-date_time \
+--with-filesystem \
+--with-iostreams  \
+--with-math \
+--with-regex \
+--with-serialization \
+--with-signals \
+--with-system \
+--with-thread \
+--with-program_options "
+
+B2_FLAGS=" -j6 \
+cxxflags='-stdlib=libc++' \
+cxxflags='-std=c++11' \
+linkflags='-stdlib=libc++' \
+--prefix=${BOOST_BINARIES_DIR} \
+--includedir=${BOOST_BINARIES_DIR}/include \
+--layout=versioned \
+toolset=clang-11 \
+variant=release \
+link=shared \
+threading=multi \
+runtime-link=shared \
+address-model=64 \
+macosx-version=10.7 \
+macosx-version-min=10.7 \
+--build-dir=bin/mac10_7/ \
+${WITH_WHICH_LIBS} \
+install "
+
+
+# (note from Aug 2015) The next time we build pyLSClient, we probably need to change the '--with-python' option to 2.7
+BOOTSTRAP_LIBS=" --with-libraries=chrono,date_time,filesystem,iostreams,math,regex,serialization,signals,system,thread,program_options \
+--with-python=/Library/Frameworks/Python.framework/Versions/2.6/bin/python \
+--with-python-root=/Library/Frameworks/Python.framework/Versions/2.6 "
+
 
 check_return_val()
 {
@@ -39,41 +70,37 @@ check_return_val()
 
 BuildBoost()
 {
-    for VERS in "$@"
-    do
-        echo "--- Building and installing ${VERS} ---"
+    ./bootstrap.sh ${BOOTSTRAP_LIBS}
 
-        ./bootstrap.sh  --with-python=/Library/Frameworks/Python.framework/Versions/2.6/bin/python  --with-python-root=/Library/Frameworks/Python.framework/Versions/2.6 ${BOOTSTRAP_LIBS}
+    check_return_val $?
 
-        check_return_val $?
+    # necessary step for building 'modular boost' (official name for 'building from the boost git repo')
+    ./b2 headers
 
-        BJAM_FLAGS="-j`sysctl hw.ncpu | awk '// {print $2*1.5}'`  address-model=64 macosx-version=10.7  macosx-version-min=10.7 --build-dir=bin/mac10_7/ --prefix=out/install ${BJAM_FLAGS} ${WITH_WHICH_LIBS} "
+    # compile the binary libraries:
+    echo "Executing ./b2 ${B2_FLAGS}"
+    ./b2 ${B2_FLAGS}
 
-        echo "Executing ./bjam ${BJAM_FLAGS}"
-        ./bjam ${BJAM_FLAGS}
-
-        check_return_val $?
-
-    done
+    check_return_val $?
 }
 
 
 RunDsymUtil()
 {
-    for FILE in `ls "$DEST_DIR"/*.dylib`
+    for FILE in `ls "$LIBS_DEST_DIR"/*.dylib`
     do
         NAME=`basename "$FILE"`
 
-        if [ \( ! -h "$DEST_DIR"/"$NAME" \) -a "$DEST_DIR"/"$NAME" -nt "$DEST_DIR"/"$NAME".dSYM ]
+        if [ \( ! -h "$LIBS_DEST_DIR"/"$NAME" \) -a "$LIBS_DEST_DIR"/"$NAME" -nt "$LIBS_DEST_DIR"/"$NAME".dSYM ]
         then
             # Since we're stripping the dylib afterwards, it's critical that
             # this not get run on a stripped library.
 
             echo "     Creating DWARF with dSYM for $NAME"
-            if dsymutil "$DEST_DIR"/"$NAME" --out="$DEST_DIR"/"$NAME".dSYM
+            if dsymutil "$LIBS_DEST_DIR"/"$NAME" --out="$LIBS_DEST_DIR"/"$NAME".dSYM
             then
                 echo "        Stripping $NAME"
-                strip -u -r -S "$DEST_DIR"/"$NAME"
+                strip -u -r -S "$LIBS_DEST_DIR"/"$NAME"
             fi
         fi
     done
@@ -82,14 +109,14 @@ RunDsymUtil()
 
 ModifyFiles()
 {
-    for LIB in "$DEST_DIR"/libboost*mt-*.dylib
+    for LIB in "$LIBS_DEST_DIR"/libboost*mt-*.dylib
     do
         LIBNAME=`basename "$LIB"`
         OLDNAME=`otool -D "$LIB" | tail -1`
         if [[ "$OLDNAME" != @executable_path/$LIBNAME ]]
         then
             echo "--- Updating references to $LIBNAME ---"
-            for FILE in "$DEST_DIR"/libboost*mt-*.dylib
+            for FILE in "$LIBS_DEST_DIR"/libboost*mt-*.dylib
             do
                 if [ -n "`otool -L ${FILE} | grep ${OLDNAME} | grep version`" ]
                 then
@@ -106,7 +133,7 @@ ModifyFiles()
 
 main()
 {
-    BuildBoost $BOOST_VERSION_NAME
+    BuildBoost
 
     ModifyFiles  # calls to install_name_tool and otool
 
