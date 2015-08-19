@@ -1,0 +1,36 @@
+diff --git a/libs/signals/src/named_slot_map.cpp b/libs/signals/src/named_slot_map.cpp
+index 1ddde63..6bcbd41 100644
+--- a/libs/signals/src/named_slot_map.cpp
++++ b/libs/signals/src/named_slot_map.cpp
+@@ -102,7 +102,7 @@ void named_slot_map::disconnect(const stored_group& name)
+       i->first.disconnect();
+       i = next;
+     }
+-    groups.erase(group);
++    groups.erase(const_group_iterator(group));
+   }
+ }
+ 
+@@ -125,7 +125,8 @@ void named_slot_map::remove_disconnected_slots()
+     }
+ 
+     // Clear out empty groups
+-    if (empty(g)) groups.erase(g++);
++    if (empty(g)) groups.erase(const_group_iterator (g++));     
++    //if (empty(g)) groups.erase(g++);
+     else ++g;
+   }
+ }
+diff --git a/tools/build/v2/user-config.jam b/tools/build/v2/user-config.jam
+index fbbf13f..6a0ed0a 100644
+--- a/tools/build/v2/user-config.jam
++++ b/tools/build/v2/user-config.jam
+@@ -90,3 +90,8 @@
+ 
+ # Configure specific Python version.
+ # using python : 3.1 : /usr/bin/python3 : /usr/include/python3.1 : /usr/lib ;
++
++using clang : 11
++    : "/usr/bin/clang++"
++    : <cxxflags>"-std=c++11 -stdlib=libc++" <linkflags>"-stdlib=libc++"
++    ;

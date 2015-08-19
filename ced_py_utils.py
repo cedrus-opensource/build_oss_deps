@@ -39,11 +39,13 @@ def verify_absence_of_homebrew():
         exit()
 
 
-def enforce_dir_exists(the_dir_path):
+def enforce_dir_exists(the_dir_path, extra_msg=''):
     if (False == os.path.exists(the_dir_path)) or (
             False == os.path.isdir(the_dir_path)):
         print('FAIL. Cedrus script cannot verify that "' + str(the_dir_path) +
               '" is a directory')
+        if len(extra_msg) > 0:
+            print(extra_msg)
         exit()
 
 
@@ -109,6 +111,10 @@ def git_repo_checkout_revision(repopath, revision):
 
 def git_repo_apply_patch(repopath, patchfile):
     _git_exec_and_return_stdout('git apply ' + patchfile, repopath)
+
+
+def git_submodule_update(repopath):
+    _git_exec_and_return_stdout('git submodule update', repopath)
 
 
 def exec_command_using_given_cwd(command_string, working_dir):
