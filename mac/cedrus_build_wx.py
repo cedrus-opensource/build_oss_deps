@@ -48,9 +48,6 @@ ced_py_utils.git_repo_apply_patch(wx_src_dir,
 
 ced_py_utils.exec_command_using_given_cwd('./cedrus_build_wx.sh', wx_src_dir)
 
-# this symlink is needed so that our builds can find all the wx header files:
-os.symlink(wx_src_dir + '/include', binaries_wx_dir + '/include')
-
 # this symlink is needed so that 'wxrc' can launch after we ran install_name_tool on the wx dylibs:
 os.symlink(binaries_wx_dir + '/built_libs/bin/wxrc',
            binaries_wx_dir + '/built_libs/lib/wxrc')
