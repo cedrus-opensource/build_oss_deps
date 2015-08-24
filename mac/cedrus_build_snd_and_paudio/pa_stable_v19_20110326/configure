@@ -11326,13 +11326,13 @@ case "${host_os}" in
         LIBS="-framework CoreAudio -framework AudioToolbox -framework AudioUnit -framework Carbon"
 
         if test "x$enable_mac_universal" = "xyes" ; then
-           mac_version_min="-mmacosx-version-min=10.3"
+           mac_version_min="-mmacosx-version-min=10.7"
            if [ -d /Developer/SDKs/MacOSX10.5.sdk ] ; then
-              mac_arches="-arch i386 -arch ppc -arch x86_64 -arch ppc64"
-              mac_sysroot="-isysroot /Developer/SDKs/MacOSX10.5.sdk"
+              mac_arches="-arch x86_64"
+              mac_sysroot="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
            else
-              mac_arches="-arch i386 -arch ppc"
-              mac_sysroot="-isysroot /Developer/SDKs/MacOSX10.4u.sdk"
+              mac_arches="-arch x86_64"
+              mac_sysroot="-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
            fi
         else
            mac_arches=""
