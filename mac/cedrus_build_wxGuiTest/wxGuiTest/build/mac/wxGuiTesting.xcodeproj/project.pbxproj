@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AA751CE0F77EF980029D10B /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BA0F77EF980029D10B /* Common.h */; };
+		7AA751CF0F77EF980029D10B /* CppUnitWarningAsserter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BB0F77EF980029D10B /* CppUnitWarningAsserter.h */; };
+		7AA751D00F77EF980029D10B /* CRCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BC0F77EF980029D10B /* CRCapture.h */; };
+		7AA751D10F77EF980029D10B /* CRCaptureControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BD0F77EF980029D10B /* CRCaptureControl.h */; };
+		7AA751D20F77EF980029D10B /* CRCppEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BE0F77EF980029D10B /* CRCppEmitter.h */; };
+		7AA751D30F77EF980029D10B /* CREventCaptureManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751BF0F77EF980029D10B /* CREventCaptureManager.h */; };
+		7AA751D40F77EF980029D10B /* CREventFilterInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C00F77EF980029D10B /* CREventFilterInterface.h */; };
+		7AA751D50F77EF980029D10B /* CRLogInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C10F77EF980029D10B /* CRLogInterface.h */; };
+		7AA751D60F77EF980029D10B /* CRWindowHierarchyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C20F77EF980029D10B /* CRWindowHierarchyHandler.h */; };
+		7AA751D70F77EF980029D10B /* EventSimulationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C30F77EF980029D10B /* EventSimulationHelper.h */; };
+		7AA751D80F77EF980029D10B /* InitWxGuiTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C40F77EF980029D10B /* InitWxGuiTest.h */; };
+		7AA751D90F77EF980029D10B /* ModalDialogInteractionInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C50F77EF980029D10B /* ModalDialogInteractionInterface.h */; };
+		7AA751DA0F77EF980029D10B /* ModalDialogTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C60F77EF980029D10B /* ModalDialogTimer.h */; };
+		7AA751DB0F77EF980029D10B /* ProvokedWarning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C70F77EF980029D10B /* ProvokedWarning.h */; };
+		7AA751DC0F77EF980029D10B /* ProvokedWarningRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C80F77EF980029D10B /* ProvokedWarningRegistry.h */; };
+		7AA751DD0F77EF980029D10B /* TempInteractive.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751C90F77EF980029D10B /* TempInteractive.h */; };
+		7AA751DE0F77EF980029D10B /* TimedDialogEnder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751CA0F77EF980029D10B /* TimedDialogEnder.h */; };
+		7AA751DF0F77EF980029D10B /* WarningAsserterInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751CB0F77EF980029D10B /* WarningAsserterInterface.h */; };
+		7AA751E00F77EF980029D10B /* WxGuiTestApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751CC0F77EF980029D10B /* WxGuiTestApp.h */; };
+		7AA751E10F77EF980029D10B /* WxGuiTestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751CD0F77EF980029D10B /* WxGuiTestHelper.h */; };
+		7AA752130F77EFEC0029D10B /* CRAbstractTreeEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751E30F77EFEC0029D10B /* CRAbstractTreeEvent.cpp */; };
+		7AA752140F77EFEC0029D10B /* CRAbstractTreeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751E40F77EFEC0029D10B /* CRAbstractTreeEvent.h */; };
+		7AA752150F77EFEC0029D10B /* CRButtonClickEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751E50F77EFEC0029D10B /* CRButtonClickEvent.cpp */; };
+		7AA752160F77EFEC0029D10B /* CRButtonClickEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751E60F77EFEC0029D10B /* CRButtonClickEvent.h */; };
+		7AA752170F77EFEC0029D10B /* CRCapturedEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751E70F77EFEC0029D10B /* CRCapturedEvent.cpp */; };
+		7AA752180F77EFEC0029D10B /* CRCapturedEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751E80F77EFEC0029D10B /* CRCapturedEvent.h */; };
+		7AA752190F77EFEC0029D10B /* CRCheckBoxClickEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751E90F77EFEC0029D10B /* CRCheckBoxClickEvent.cpp */; };
+		7AA7521A0F77EFEC0029D10B /* CRCheckBoxClickEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751EA0F77EFEC0029D10B /* CRCheckBoxClickEvent.h */; };
+		7AA7521B0F77EFEC0029D10B /* CRChoiceSelectionEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751EB0F77EFEC0029D10B /* CRChoiceSelectionEvent.cpp */; };
+		7AA7521C0F77EFEC0029D10B /* CRChoiceSelectionEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751EC0F77EFEC0029D10B /* CRChoiceSelectionEvent.h */; };
+		7AA7521D0F77EFEC0029D10B /* CRMenuSelectionEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751ED0F77EFEC0029D10B /* CRMenuSelectionEvent.cpp */; };
+		7AA7521E0F77EFEC0029D10B /* CRMenuSelectionEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751EE0F77EFEC0029D10B /* CRMenuSelectionEvent.h */; };
+		7AA7521F0F77EFEC0029D10B /* CRNotebookPageChangeEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751EF0F77EFEC0029D10B /* CRNotebookPageChangeEvent.cpp */; };
+		7AA752200F77EFEC0029D10B /* CRNotebookPageChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751F00F77EFEC0029D10B /* CRNotebookPageChangeEvent.h */; };
+		7AA752210F77EFEC0029D10B /* CRRadioBoxSelectionEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751F10F77EFEC0029D10B /* CRRadioBoxSelectionEvent.cpp */; };
+		7AA752220F77EFEC0029D10B /* CRRadioBoxSelectionEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751F20F77EFEC0029D10B /* CRRadioBoxSelectionEvent.h */; };
+		7AA752230F77EFEC0029D10B /* CRSliderUpdateEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751F30F77EFEC0029D10B /* CRSliderUpdateEvent.cpp */; };
+		7AA752240F77EFEC0029D10B /* CRSliderUpdateEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751F40F77EFEC0029D10B /* CRSliderUpdateEvent.h */; };
+		7AA752250F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751F50F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.cpp */; };
+		7AA752260F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751F60F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.h */; };
+		7AA752270F77EFEC0029D10B /* CRTextUpdateEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751F70F77EFEC0029D10B /* CRTextUpdateEvent.cpp */; };
+		7AA752280F77EFEC0029D10B /* CRTextUpdateEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751F80F77EFEC0029D10B /* CRTextUpdateEvent.h */; };
+		7AA752290F77EFEC0029D10B /* CRTreeItemRightClickEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751F90F77EFEC0029D10B /* CRTreeItemRightClickEvent.cpp */; };
+		7AA7522A0F77EFEC0029D10B /* CRTreeItemRightClickEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751FA0F77EFEC0029D10B /* CRTreeItemRightClickEvent.h */; };
+		7AA7522B0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751FB0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.cpp */; };
+		7AA7522C0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA751FC0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.h */; };
+		7AA7522D0F77EFEC0029D10B /* CapturePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751FD0F77EFEC0029D10B /* CapturePanel.cpp */; };
+		7AA7522E0F77EFEC0029D10B /* CppUnitWarningAsserter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751FE0F77EFEC0029D10B /* CppUnitWarningAsserter.cpp */; };
+		7AA7522F0F77EFEC0029D10B /* CRCapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA751FF0F77EFEC0029D10B /* CRCapture.cpp */; };
+		7AA752300F77EFEC0029D10B /* CRCaptureControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752000F77EFEC0029D10B /* CRCaptureControl.cpp */; };
+		7AA752310F77EFEC0029D10B /* CRCppEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752010F77EFEC0029D10B /* CRCppEmitter.cpp */; };
+		7AA752320F77EFEC0029D10B /* CREventCaptureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752020F77EFEC0029D10B /* CREventCaptureManager.cpp */; };
+		7AA752330F77EFEC0029D10B /* CREventFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752030F77EFEC0029D10B /* CREventFactory.cpp */; };
+		7AA752340F77EFEC0029D10B /* CREventFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA752040F77EFEC0029D10B /* CREventFactory.h */; };
+		7AA752350F77EFEC0029D10B /* CRWindowHierarchyHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752050F77EFEC0029D10B /* CRWindowHierarchyHandler.cpp */; };
+		7AA752360F77EFEC0029D10B /* EventSimulationHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752060F77EFEC0029D10B /* EventSimulationHelper.cpp */; };
+		7AA752370F77EFEC0029D10B /* InitWxGuiTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752070F77EFEC0029D10B /* InitWxGuiTest.cpp */; };
+		7AA752380F77EFEC0029D10B /* InitWxGuiTestSetUp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752080F77EFEC0029D10B /* InitWxGuiTestSetUp.cpp */; };
+		7AA752390F77EFEC0029D10B /* InitWxGuiTestSetUp.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA752090F77EFEC0029D10B /* InitWxGuiTestSetUp.h */; };
+		7AA7523A0F77EFEC0029D10B /* ModalDialogTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7520A0F77EFEC0029D10B /* ModalDialogTimer.cpp */; };
+		7AA7523B0F77EFEC0029D10B /* ProvokedWarning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7520B0F77EFEC0029D10B /* ProvokedWarning.cpp */; };
+		7AA7523C0F77EFEC0029D10B /* ProvokedWarningRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7520C0F77EFEC0029D10B /* ProvokedWarningRegistry.cpp */; };
+		7AA7523D0F77EFEC0029D10B /* TempInteractive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7520D0F77EFEC0029D10B /* TempInteractive.cpp */; };
+		7AA7523E0F77EFEC0029D10B /* TempInteractiveControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7520E0F77EFEC0029D10B /* TempInteractiveControl.cpp */; };
+		7AA7523F0F77EFEC0029D10B /* TempInteractiveControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA7520F0F77EFEC0029D10B /* TempInteractiveControl.h */; };
+		7AA752400F77EFEC0029D10B /* TimedDialogEnder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752100F77EFEC0029D10B /* TimedDialogEnder.cpp */; };
+		7AA752410F77EFEC0029D10B /* WxGuiTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752110F77EFEC0029D10B /* WxGuiTestApp.cpp */; };
+		7AA752420F77EFEC0029D10B /* WxGuiTestHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA752120F77EFEC0029D10B /* WxGuiTestHelper.cpp */; };
+		7ABD2F830F77FA8F00A5BAFD /* libcppunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABD2F820F77FA8F00A5BAFD /* libcppunit.a */; };
+		D2AAC0B105546B7500DB518D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		7AA751BA0F77EF980029D10B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = ../../../wxGuiTest/include/wxGuiTest/Common.h; sourceTree = SOURCE_ROOT; };
+		7AA751BB0F77EF980029D10B /* CppUnitWarningAsserter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CppUnitWarningAsserter.h; path = ../../../wxGuiTest/include/wxGuiTest/CppUnitWarningAsserter.h; sourceTree = SOURCE_ROOT; };
+		7AA751BC0F77EF980029D10B /* CRCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCapture.h; path = ../../../wxGuiTest/include/wxGuiTest/CRCapture.h; sourceTree = SOURCE_ROOT; };
+		7AA751BD0F77EF980029D10B /* CRCaptureControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCaptureControl.h; path = ../../../wxGuiTest/include/wxGuiTest/CRCaptureControl.h; sourceTree = SOURCE_ROOT; };
+		7AA751BE0F77EF980029D10B /* CRCppEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCppEmitter.h; path = ../../../wxGuiTest/include/wxGuiTest/CRCppEmitter.h; sourceTree = SOURCE_ROOT; };
+		7AA751BF0F77EF980029D10B /* CREventCaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CREventCaptureManager.h; path = ../../../wxGuiTest/include/wxGuiTest/CREventCaptureManager.h; sourceTree = SOURCE_ROOT; };
+		7AA751C00F77EF980029D10B /* CREventFilterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CREventFilterInterface.h; path = ../../../wxGuiTest/include/wxGuiTest/CREventFilterInterface.h; sourceTree = SOURCE_ROOT; };
+		7AA751C10F77EF980029D10B /* CRLogInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRLogInterface.h; path = ../../../wxGuiTest/include/wxGuiTest/CRLogInterface.h; sourceTree = SOURCE_ROOT; };
+		7AA751C20F77EF980029D10B /* CRWindowHierarchyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRWindowHierarchyHandler.h; path = ../../../wxGuiTest/include/wxGuiTest/CRWindowHierarchyHandler.h; sourceTree = SOURCE_ROOT; };
+		7AA751C30F77EF980029D10B /* EventSimulationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventSimulationHelper.h; path = ../../../wxGuiTest/include/wxGuiTest/EventSimulationHelper.h; sourceTree = SOURCE_ROOT; };
+		7AA751C40F77EF980029D10B /* InitWxGuiTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitWxGuiTest.h; path = ../../../wxGuiTest/include/wxGuiTest/InitWxGuiTest.h; sourceTree = SOURCE_ROOT; };
+		7AA751C50F77EF980029D10B /* ModalDialogInteractionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModalDialogInteractionInterface.h; path = ../../../wxGuiTest/include/wxGuiTest/ModalDialogInteractionInterface.h; sourceTree = SOURCE_ROOT; };
+		7AA751C60F77EF980029D10B /* ModalDialogTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModalDialogTimer.h; path = ../../../wxGuiTest/include/wxGuiTest/ModalDialogTimer.h; sourceTree = SOURCE_ROOT; };
+		7AA751C70F77EF980029D10B /* ProvokedWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProvokedWarning.h; path = ../../../wxGuiTest/include/wxGuiTest/ProvokedWarning.h; sourceTree = SOURCE_ROOT; };
+		7AA751C80F77EF980029D10B /* ProvokedWarningRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProvokedWarningRegistry.h; path = ../../../wxGuiTest/include/wxGuiTest/ProvokedWarningRegistry.h; sourceTree = SOURCE_ROOT; };
+		7AA751C90F77EF980029D10B /* TempInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempInteractive.h; path = ../../../wxGuiTest/include/wxGuiTest/TempInteractive.h; sourceTree = SOURCE_ROOT; };
+		7AA751CA0F77EF980029D10B /* TimedDialogEnder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimedDialogEnder.h; path = ../../../wxGuiTest/include/wxGuiTest/TimedDialogEnder.h; sourceTree = SOURCE_ROOT; };
+		7AA751CB0F77EF980029D10B /* WarningAsserterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WarningAsserterInterface.h; path = ../../../wxGuiTest/include/wxGuiTest/WarningAsserterInterface.h; sourceTree = SOURCE_ROOT; };
+		7AA751CC0F77EF980029D10B /* WxGuiTestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WxGuiTestApp.h; path = ../../../wxGuiTest/include/wxGuiTest/WxGuiTestApp.h; sourceTree = SOURCE_ROOT; };
+		7AA751CD0F77EF980029D10B /* WxGuiTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WxGuiTestHelper.h; path = ../../../wxGuiTest/include/wxGuiTest/WxGuiTestHelper.h; sourceTree = SOURCE_ROOT; };
+		7AA751E30F77EFEC0029D10B /* CRAbstractTreeEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRAbstractTreeEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRAbstractTreeEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751E40F77EFEC0029D10B /* CRAbstractTreeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRAbstractTreeEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRAbstractTreeEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751E50F77EFEC0029D10B /* CRButtonClickEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRButtonClickEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRButtonClickEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751E60F77EFEC0029D10B /* CRButtonClickEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRButtonClickEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRButtonClickEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751E70F77EFEC0029D10B /* CRCapturedEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRCapturedEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRCapturedEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751E80F77EFEC0029D10B /* CRCapturedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCapturedEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRCapturedEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751E90F77EFEC0029D10B /* CRCheckBoxClickEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRCheckBoxClickEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRCheckBoxClickEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751EA0F77EFEC0029D10B /* CRCheckBoxClickEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCheckBoxClickEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRCheckBoxClickEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751EB0F77EFEC0029D10B /* CRChoiceSelectionEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRChoiceSelectionEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRChoiceSelectionEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751EC0F77EFEC0029D10B /* CRChoiceSelectionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRChoiceSelectionEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRChoiceSelectionEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751ED0F77EFEC0029D10B /* CRMenuSelectionEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRMenuSelectionEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRMenuSelectionEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751EE0F77EFEC0029D10B /* CRMenuSelectionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRMenuSelectionEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRMenuSelectionEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751EF0F77EFEC0029D10B /* CRNotebookPageChangeEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRNotebookPageChangeEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRNotebookPageChangeEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751F00F77EFEC0029D10B /* CRNotebookPageChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRNotebookPageChangeEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRNotebookPageChangeEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751F10F77EFEC0029D10B /* CRRadioBoxSelectionEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRRadioBoxSelectionEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRRadioBoxSelectionEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751F20F77EFEC0029D10B /* CRRadioBoxSelectionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRadioBoxSelectionEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRRadioBoxSelectionEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751F30F77EFEC0029D10B /* CRSliderUpdateEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRSliderUpdateEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRSliderUpdateEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751F40F77EFEC0029D10B /* CRSliderUpdateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRSliderUpdateEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRSliderUpdateEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751F50F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRSpinCtrlUpdateEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRSpinCtrlUpdateEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751F60F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRSpinCtrlUpdateEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRSpinCtrlUpdateEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751F70F77EFEC0029D10B /* CRTextUpdateEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRTextUpdateEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRTextUpdateEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751F80F77EFEC0029D10B /* CRTextUpdateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRTextUpdateEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRTextUpdateEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751F90F77EFEC0029D10B /* CRTreeItemRightClickEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRTreeItemRightClickEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRTreeItemRightClickEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751FA0F77EFEC0029D10B /* CRTreeItemRightClickEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRTreeItemRightClickEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRTreeItemRightClickEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751FB0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRTreeSelectionChangingEvent.cpp; path = ../../../wxGuiTest/src/CapturedEvents/CRTreeSelectionChangingEvent.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751FC0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRTreeSelectionChangingEvent.h; path = ../../../wxGuiTest/src/CapturedEvents/CRTreeSelectionChangingEvent.h; sourceTree = SOURCE_ROOT; };
+		7AA751FD0F77EFEC0029D10B /* CapturePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CapturePanel.cpp; path = ../../../wxGuiTest/src/CapturePanel.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751FE0F77EFEC0029D10B /* CppUnitWarningAsserter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CppUnitWarningAsserter.cpp; path = ../../../wxGuiTest/src/CppUnitWarningAsserter.cpp; sourceTree = SOURCE_ROOT; };
+		7AA751FF0F77EFEC0029D10B /* CRCapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRCapture.cpp; path = ../../../wxGuiTest/src/CRCapture.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752000F77EFEC0029D10B /* CRCaptureControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRCaptureControl.cpp; path = ../../../wxGuiTest/src/CRCaptureControl.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752010F77EFEC0029D10B /* CRCppEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRCppEmitter.cpp; path = ../../../wxGuiTest/src/CRCppEmitter.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752020F77EFEC0029D10B /* CREventCaptureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CREventCaptureManager.cpp; path = ../../../wxGuiTest/src/CREventCaptureManager.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752030F77EFEC0029D10B /* CREventFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CREventFactory.cpp; path = ../../../wxGuiTest/src/CREventFactory.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752040F77EFEC0029D10B /* CREventFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CREventFactory.h; path = ../../../wxGuiTest/src/CREventFactory.h; sourceTree = SOURCE_ROOT; };
+		7AA752050F77EFEC0029D10B /* CRWindowHierarchyHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRWindowHierarchyHandler.cpp; path = ../../../wxGuiTest/src/CRWindowHierarchyHandler.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752060F77EFEC0029D10B /* EventSimulationHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventSimulationHelper.cpp; path = ../../../wxGuiTest/src/EventSimulationHelper.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752070F77EFEC0029D10B /* InitWxGuiTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InitWxGuiTest.cpp; path = ../../../wxGuiTest/src/InitWxGuiTest.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752080F77EFEC0029D10B /* InitWxGuiTestSetUp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InitWxGuiTestSetUp.cpp; path = ../../../wxGuiTest/src/InitWxGuiTestSetUp.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752090F77EFEC0029D10B /* InitWxGuiTestSetUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitWxGuiTestSetUp.h; path = ../../../wxGuiTest/src/InitWxGuiTestSetUp.h; sourceTree = SOURCE_ROOT; };
+		7AA7520A0F77EFEC0029D10B /* ModalDialogTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModalDialogTimer.cpp; path = ../../../wxGuiTest/src/ModalDialogTimer.cpp; sourceTree = SOURCE_ROOT; };
+		7AA7520B0F77EFEC0029D10B /* ProvokedWarning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProvokedWarning.cpp; path = ../../../wxGuiTest/src/ProvokedWarning.cpp; sourceTree = SOURCE_ROOT; };
+		7AA7520C0F77EFEC0029D10B /* ProvokedWarningRegistry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProvokedWarningRegistry.cpp; path = ../../../wxGuiTest/src/ProvokedWarningRegistry.cpp; sourceTree = SOURCE_ROOT; };
+		7AA7520D0F77EFEC0029D10B /* TempInteractive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TempInteractive.cpp; path = ../../../wxGuiTest/src/TempInteractive.cpp; sourceTree = SOURCE_ROOT; };
+		7AA7520E0F77EFEC0029D10B /* TempInteractiveControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TempInteractiveControl.cpp; path = ../../../wxGuiTest/src/TempInteractiveControl.cpp; sourceTree = SOURCE_ROOT; };
+		7AA7520F0F77EFEC0029D10B /* TempInteractiveControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempInteractiveControl.h; path = ../../../wxGuiTest/src/TempInteractiveControl.h; sourceTree = SOURCE_ROOT; };
+		7AA752100F77EFEC0029D10B /* TimedDialogEnder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimedDialogEnder.cpp; path = ../../../wxGuiTest/src/TimedDialogEnder.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752110F77EFEC0029D10B /* WxGuiTestApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WxGuiTestApp.cpp; path = ../../../wxGuiTest/src/WxGuiTestApp.cpp; sourceTree = SOURCE_ROOT; };
+		7AA752120F77EFEC0029D10B /* WxGuiTestHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WxGuiTestHelper.cpp; path = ../../../wxGuiTest/src/WxGuiTestHelper.cpp; sourceTree = SOURCE_ROOT; };
+		7ABD2F820F77FA8F00A5BAFD /* libcppunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcppunit.a; path = ../../built_libs/debug/libcppunit.a; sourceTree = SOURCE_ROOT; };
+		D2AAC09D05546B4700DB518D /* libwxGuiTesting.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libwxGuiTesting.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC09B05546B4700DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC0B105546B7500DB518D /* Carbon.framework in Frameworks */,
+				7ABD2F830F77FA8F00A5BAFD /* libcppunit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DDFF38A45A11DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC09D05546B4700DB518D /* libwxGuiTesting.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* wxGuiTesting */ = {
+			isa = PBXGroup;
+			children = (
+				7ABD2F820F77FA8F00A5BAFD /* libcppunit.a */,
+				7AA751E20F77EFEC0029D10B /* CapturedEvents */,
+				7AA751FD0F77EFEC0029D10B /* CapturePanel.cpp */,
+				7AA751FE0F77EFEC0029D10B /* CppUnitWarningAsserter.cpp */,
+				7AA751FF0F77EFEC0029D10B /* CRCapture.cpp */,
+				7AA752000F77EFEC0029D10B /* CRCaptureControl.cpp */,
+				7AA752010F77EFEC0029D10B /* CRCppEmitter.cpp */,
+				7AA752020F77EFEC0029D10B /* CREventCaptureManager.cpp */,
+				7AA752030F77EFEC0029D10B /* CREventFactory.cpp */,
+				7AA752040F77EFEC0029D10B /* CREventFactory.h */,
+				7AA752050F77EFEC0029D10B /* CRWindowHierarchyHandler.cpp */,
+				7AA752060F77EFEC0029D10B /* EventSimulationHelper.cpp */,
+				7AA752070F77EFEC0029D10B /* InitWxGuiTest.cpp */,
+				7AA752080F77EFEC0029D10B /* InitWxGuiTestSetUp.cpp */,
+				7AA752090F77EFEC0029D10B /* InitWxGuiTestSetUp.h */,
+				7AA7520A0F77EFEC0029D10B /* ModalDialogTimer.cpp */,
+				7AA7520B0F77EFEC0029D10B /* ProvokedWarning.cpp */,
+				7AA7520C0F77EFEC0029D10B /* ProvokedWarningRegistry.cpp */,
+				7AA7520D0F77EFEC0029D10B /* TempInteractive.cpp */,
+				7AA7520E0F77EFEC0029D10B /* TempInteractiveControl.cpp */,
+				7AA7520F0F77EFEC0029D10B /* TempInteractiveControl.h */,
+				7AA752100F77EFEC0029D10B /* TimedDialogEnder.cpp */,
+				7AA752110F77EFEC0029D10B /* WxGuiTestApp.cpp */,
+				7AA752120F77EFEC0029D10B /* WxGuiTestHelper.cpp */,
+				7AA751BA0F77EF980029D10B /* Common.h */,
+				7AA751BB0F77EF980029D10B /* CppUnitWarningAsserter.h */,
+				7AA751BC0F77EF980029D10B /* CRCapture.h */,
+				7AA751BD0F77EF980029D10B /* CRCaptureControl.h */,
+				7AA751BE0F77EF980029D10B /* CRCppEmitter.h */,
+				7AA751BF0F77EF980029D10B /* CREventCaptureManager.h */,
+				7AA751C00F77EF980029D10B /* CREventFilterInterface.h */,
+				7AA751C10F77EF980029D10B /* CRLogInterface.h */,
+				7AA751C20F77EF980029D10B /* CRWindowHierarchyHandler.h */,
+				7AA751C30F77EF980029D10B /* EventSimulationHelper.h */,
+				7AA751C40F77EF980029D10B /* InitWxGuiTest.h */,
+				7AA751C50F77EF980029D10B /* ModalDialogInteractionInterface.h */,
+				7AA751C60F77EF980029D10B /* ModalDialogTimer.h */,
+				7AA751C70F77EF980029D10B /* ProvokedWarning.h */,
+				7AA751C80F77EF980029D10B /* ProvokedWarningRegistry.h */,
+				7AA751C90F77EF980029D10B /* TempInteractive.h */,
+				7AA751CA0F77EF980029D10B /* TimedDialogEnder.h */,
+				7AA751CB0F77EF980029D10B /* WarningAsserterInterface.h */,
+				7AA751CC0F77EF980029D10B /* WxGuiTestApp.h */,
+				7AA751CD0F77EF980029D10B /* WxGuiTestHelper.h */,
+				08FB77ACFE841707C02AAC07 /* Source */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DDFF38A45A11DB9C8B /* Products */,
+			);
+			name = wxGuiTesting;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AAFE841565C02AAC07 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB77ACFE841707C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		7AA751E20F77EFEC0029D10B /* CapturedEvents */ = {
+			isa = PBXGroup;
+			children = (
+				7AA751E30F77EFEC0029D10B /* CRAbstractTreeEvent.cpp */,
+				7AA751E40F77EFEC0029D10B /* CRAbstractTreeEvent.h */,
+				7AA751E50F77EFEC0029D10B /* CRButtonClickEvent.cpp */,
+				7AA751E60F77EFEC0029D10B /* CRButtonClickEvent.h */,
+				7AA751E70F77EFEC0029D10B /* CRCapturedEvent.cpp */,
+				7AA751E80F77EFEC0029D10B /* CRCapturedEvent.h */,
+				7AA751E90F77EFEC0029D10B /* CRCheckBoxClickEvent.cpp */,
+				7AA751EA0F77EFEC0029D10B /* CRCheckBoxClickEvent.h */,
+				7AA751EB0F77EFEC0029D10B /* CRChoiceSelectionEvent.cpp */,
+				7AA751EC0F77EFEC0029D10B /* CRChoiceSelectionEvent.h */,
+				7AA751ED0F77EFEC0029D10B /* CRMenuSelectionEvent.cpp */,
+				7AA751EE0F77EFEC0029D10B /* CRMenuSelectionEvent.h */,
+				7AA751EF0F77EFEC0029D10B /* CRNotebookPageChangeEvent.cpp */,
+				7AA751F00F77EFEC0029D10B /* CRNotebookPageChangeEvent.h */,
+				7AA751F10F77EFEC0029D10B /* CRRadioBoxSelectionEvent.cpp */,
+				7AA751F20F77EFEC0029D10B /* CRRadioBoxSelectionEvent.h */,
+				7AA751F30F77EFEC0029D10B /* CRSliderUpdateEvent.cpp */,
+				7AA751F40F77EFEC0029D10B /* CRSliderUpdateEvent.h */,
+				7AA751F50F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.cpp */,
+				7AA751F60F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.h */,
+				7AA751F70F77EFEC0029D10B /* CRTextUpdateEvent.cpp */,
+				7AA751F80F77EFEC0029D10B /* CRTextUpdateEvent.h */,
+				7AA751F90F77EFEC0029D10B /* CRTreeItemRightClickEvent.cpp */,
+				7AA751FA0F77EFEC0029D10B /* CRTreeItemRightClickEvent.h */,
+				7AA751FB0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.cpp */,
+				7AA751FC0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.h */,
+			);
+			name = CapturedEvents;
+			path = ../../../wxGuiTest/src/CapturedEvents;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC09905546B4700DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA751CE0F77EF980029D10B /* Common.h in Headers */,
+				7AA751CF0F77EF980029D10B /* CppUnitWarningAsserter.h in Headers */,
+				7AA751D00F77EF980029D10B /* CRCapture.h in Headers */,
+				7AA751D10F77EF980029D10B /* CRCaptureControl.h in Headers */,
+				7AA751D20F77EF980029D10B /* CRCppEmitter.h in Headers */,
+				7AA751D30F77EF980029D10B /* CREventCaptureManager.h in Headers */,
+				7AA751D40F77EF980029D10B /* CREventFilterInterface.h in Headers */,
+				7AA751D50F77EF980029D10B /* CRLogInterface.h in Headers */,
+				7AA751D60F77EF980029D10B /* CRWindowHierarchyHandler.h in Headers */,
+				7AA751D70F77EF980029D10B /* EventSimulationHelper.h in Headers */,
+				7AA751D80F77EF980029D10B /* InitWxGuiTest.h in Headers */,
+				7AA751D90F77EF980029D10B /* ModalDialogInteractionInterface.h in Headers */,
+				7AA751DA0F77EF980029D10B /* ModalDialogTimer.h in Headers */,
+				7AA751DB0F77EF980029D10B /* ProvokedWarning.h in Headers */,
+				7AA751DC0F77EF980029D10B /* ProvokedWarningRegistry.h in Headers */,
+				7AA751DD0F77EF980029D10B /* TempInteractive.h in Headers */,
+				7AA751DE0F77EF980029D10B /* TimedDialogEnder.h in Headers */,
+				7AA751DF0F77EF980029D10B /* WarningAsserterInterface.h in Headers */,
+				7AA751E00F77EF980029D10B /* WxGuiTestApp.h in Headers */,
+				7AA751E10F77EF980029D10B /* WxGuiTestHelper.h in Headers */,
+				7AA752140F77EFEC0029D10B /* CRAbstractTreeEvent.h in Headers */,
+				7AA752160F77EFEC0029D10B /* CRButtonClickEvent.h in Headers */,
+				7AA752180F77EFEC0029D10B /* CRCapturedEvent.h in Headers */,
+				7AA7521A0F77EFEC0029D10B /* CRCheckBoxClickEvent.h in Headers */,
+				7AA7521C0F77EFEC0029D10B /* CRChoiceSelectionEvent.h in Headers */,
+				7AA7521E0F77EFEC0029D10B /* CRMenuSelectionEvent.h in Headers */,
+				7AA752200F77EFEC0029D10B /* CRNotebookPageChangeEvent.h in Headers */,
+				7AA752220F77EFEC0029D10B /* CRRadioBoxSelectionEvent.h in Headers */,
+				7AA752240F77EFEC0029D10B /* CRSliderUpdateEvent.h in Headers */,
+				7AA752260F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.h in Headers */,
+				7AA752280F77EFEC0029D10B /* CRTextUpdateEvent.h in Headers */,
+				7AA7522A0F77EFEC0029D10B /* CRTreeItemRightClickEvent.h in Headers */,
+				7AA7522C0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.h in Headers */,
+				7AA752340F77EFEC0029D10B /* CREventFactory.h in Headers */,
+				7AA752390F77EFEC0029D10B /* InitWxGuiTestSetUp.h in Headers */,
+				7AA7523F0F77EFEC0029D10B /* TempInteractiveControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC09C05546B4700DB518D /* wxGuiTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB916008733D950010E9CD /* Build configuration list for PBXNativeTarget "wxGuiTesting" */;
+			buildPhases = (
+				D2AAC09905546B4700DB518D /* Headers */,
+				D2AAC09B05546B4700DB518D /* Frameworks */,
+				D2AAC09A05546B4700DB518D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wxGuiTesting;
+			productName = wxGuiTesting;
+			productReference = D2AAC09D05546B4700DB518D /* libwxGuiTesting.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB916408733D950010E9CD /* Build configuration list for PBXProject "wxGuiTesting" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* wxGuiTesting */;
+			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC09C05546B4700DB518D /* wxGuiTesting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC09A05546B4700DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA752130F77EFEC0029D10B /* CRAbstractTreeEvent.cpp in Sources */,
+				7AA752150F77EFEC0029D10B /* CRButtonClickEvent.cpp in Sources */,
+				7AA752170F77EFEC0029D10B /* CRCapturedEvent.cpp in Sources */,
+				7AA752190F77EFEC0029D10B /* CRCheckBoxClickEvent.cpp in Sources */,
+				7AA7521B0F77EFEC0029D10B /* CRChoiceSelectionEvent.cpp in Sources */,
+				7AA7521D0F77EFEC0029D10B /* CRMenuSelectionEvent.cpp in Sources */,
+				7AA7521F0F77EFEC0029D10B /* CRNotebookPageChangeEvent.cpp in Sources */,
+				7AA752210F77EFEC0029D10B /* CRRadioBoxSelectionEvent.cpp in Sources */,
+				7AA752230F77EFEC0029D10B /* CRSliderUpdateEvent.cpp in Sources */,
+				7AA752250F77EFEC0029D10B /* CRSpinCtrlUpdateEvent.cpp in Sources */,
+				7AA752270F77EFEC0029D10B /* CRTextUpdateEvent.cpp in Sources */,
+				7AA752290F77EFEC0029D10B /* CRTreeItemRightClickEvent.cpp in Sources */,
+				7AA7522B0F77EFEC0029D10B /* CRTreeSelectionChangingEvent.cpp in Sources */,
+				7AA7522D0F77EFEC0029D10B /* CapturePanel.cpp in Sources */,
+				7AA7522E0F77EFEC0029D10B /* CppUnitWarningAsserter.cpp in Sources */,
+				7AA7522F0F77EFEC0029D10B /* CRCapture.cpp in Sources */,
+				7AA752300F77EFEC0029D10B /* CRCaptureControl.cpp in Sources */,
+				7AA752310F77EFEC0029D10B /* CRCppEmitter.cpp in Sources */,
+				7AA752320F77EFEC0029D10B /* CREventCaptureManager.cpp in Sources */,
+				7AA752330F77EFEC0029D10B /* CREventFactory.cpp in Sources */,
+				7AA752350F77EFEC0029D10B /* CRWindowHierarchyHandler.cpp in Sources */,
+				7AA752360F77EFEC0029D10B /* EventSimulationHelper.cpp in Sources */,
+				7AA752370F77EFEC0029D10B /* InitWxGuiTest.cpp in Sources */,
+				7AA752380F77EFEC0029D10B /* InitWxGuiTestSetUp.cpp in Sources */,
+				7AA7523A0F77EFEC0029D10B /* ModalDialogTimer.cpp in Sources */,
+				7AA7523B0F77EFEC0029D10B /* ProvokedWarning.cpp in Sources */,
+				7AA7523C0F77EFEC0029D10B /* ProvokedWarningRegistry.cpp in Sources */,
+				7AA7523D0F77EFEC0029D10B /* TempInteractive.cpp in Sources */,
+				7AA7523E0F77EFEC0029D10B /* TempInteractiveControl.cpp in Sources */,
+				7AA752400F77EFEC0029D10B /* TimedDialogEnder.cpp in Sources */,
+				7AA752410F77EFEC0029D10B /* WxGuiTestApp.cpp in Sources */,
+				7AA752420F77EFEC0029D10B /* WxGuiTestHelper.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB916108733D950010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../built_libs/debug\"",
+				);
+				LINKED_BOOST_LIBRARIES = "";
+				PRODUCT_NAME = libwxGuiTesting;
+			};
+			name = Debug;
+		};
+		1DEB916208733D950010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/lib;
+				LD_DYLIB_INSTALL_NAME = "@executable_path/$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../built_libs/debug\"",
+				);
+				LINKED_BOOST_LIBRARIES = "";
+				PRODUCT_NAME = libwxGuiTesting;
+			};
+			name = Release;
+		};
+		1DEB916508733D950010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_DISTRO = "";
+				APPLICATION_NAME = "";
+				APPLICATION_VERSION = "1.0 alpha 1";
+				APP_NAME_FOR_SCRIPTS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BOOST_INCLUDE_PATH = "\"$(BoostInstallationBase)\"/include/boost-$(BOOST_VERSION)";
+				BOOST_LIB_PATH = "\"$(BoostInstallationBase)\"/lib/";
+				BOOST_VERSION = 1_42;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/$(APPLICATION_NAME).app/Contents/Frameworks",
+					"$(SDKROOT)/System/Library/Frameworks/",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(WX_PREPROCESSOR_DEFINITIONS)",
+					"wxUSE_SERVICE_DISCOVERY=1",
+					"WXGUITEST_IMPORTEXPORT=WXEXPORT",
+				);
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GMOCK_CPPFLAGS = "-isystem\"$(GMOCK)\"/include";
+				GMOCK_LDFLAGS = "-L$(gMockLibs)";
+				GTEST_CPPFLAGS = "-isystem\"$(GTEST)\"/include";
+				GTEST_LDFLAGS = "-L$(gTestLibs)";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../wxGuiTest/include",
+					"\"$(WXWIN_29)\"/include",
+					"\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-$(WX_VERSION)",
+					"\"$(WXWIN_29)\"/src",
+					"\"$(BOOST)\"/include/boost-$(BOOST_VERSION)",
+				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1 = "\"$(SDKROOT)\"/usr/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib",
+					"$(BUILT_PRODUCTS_DIR)/$(APPLICATION_NAME).app/Contents/Frameworks",
+				);
+				LINKED_BOOST_LIBRARIES = "-lboost_system-xgcc811-mt-$(BOOST_VERSION) -lboost_wserialization-xgcc811-mt-$(BOOST_VERSION) -lboost_serialization-xgcc811-mt-$(BOOST_VERSION) -lboost_thread-xgcc811-mt-$(BOOST_VERSION)";
+				LINKED_GMOCK_LIBRARIES = "-lgmock";
+				LINKED_GTEST_LIBRARIES = "-lgtest";
+				LINKED_WX_LIBRARIES = "-lwx_osx_cocoaud_adv-$(WX_VERSION) -lwx_osx_cocoaud_aui-$(WX_VERSION) -lwx_osx_cocoaud_core-$(WX_VERSION) -lwx_osx_cocoaud_qa-$(WX_VERSION) -lwx_osx_cocoaud_xrc-$(WX_VERSION) -lwx_osx_cocoaud_html-$(WX_VERSION) -lwx_baseud_net-$(WX_VERSION) -lwx_baseud_xml-$(WX_VERSION) -lwx_baseud-$(WX_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = NO;
+				"OPTIMIZATION_CFLAGS[arch=i386]" = "-O0";
+				"OPTIMIZATION_CFLAGS[arch=ppc]" = "-O0";
+				OPTIMIZATION_CPPFLAGS = "-fno-default-inline";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"$(OPTIMIZATION_CPPFLAGS)",
+					"$(WARNING_CPPFLAGS)",
+					"$(WX_CPPFLAGS)",
+					"-isystem",
+					"\"$(wxSD)\"/include",
+					"-isystem",
+					"\"$(BOOST_INCLUDE_PATH)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-Y,10",
+					"$(UNDEFINED_SYMBOLS)",
+					"$(WEAKLY_LINKED_FRAMEWORKS)",
+					"-L$(BOOST_LIB_PATH)",
+					"$(LINKED_BOOST_LIBRARIES)",
+					"$(WX_LDFLAGS)",
+					"-headerpad_max_install_names",
+					"-weak_reference_mismatches",
+					error,
+					"-dead_strip_dylibs",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				SHARED_PRECOMPS_DIR = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SVN = /sw/bin/svn;
+				UNDEFINED_SYMBOLS = "-undefined error";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../../../Common/src/wxYalta/ \"$(SRCROOT)\"/../../../Common/src/Base \"$(SRCROOT)\"/../../../Common/src/ \"$(SRCROOT)\"/../../../Common/src/Networking \"$(SRCROOT)\"/../../../Common/src";
+				WARNING_CPPFLAGS = "-Wstrict-null-sentinel -Wnon-virtual-dtor";
+				WEAKLY_LINKED_FRAMEWORKS = "";
+				WX_CPPFLAGS = "-isystem\"$(WXWIN_29)\"/include -isystem\"$(WXWIN_29)\"/contrib/include";
+				"WX_CPPFLAGS[arch=i386]" = "$(inherited) $(WX_EXTRA_CPPFLAGS_DEBUG) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
+				"WX_CPPFLAGS[arch=ppc]" = "$(inherited) $(WX_EXTRA_CPPFLAGS_DEBUG) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
+				WX_EXTRA_CPPFLAGS_DEBUG = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-$(WX_VERSION)";
+				WX_LDFLAGS = "$(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
+				WX_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS_DEFAULT) wxDEBUG_LEVEL=0";
+				WX_PREPROCESSOR_DEFINITIONS_DEFAULT = "__WXMAC__ _FILE_OFFSET_BITS=64 _LARGE_FILES WXUSINGDLL __WXOSX__  __WXOSX_COCOA__";
+				WX_VERSION = 2.9;
+				ZERO_LINK = NO;
+				wxSD = "\"$(SRCROOT)\"/../../../Common/src/Networking/servicediscovery";
+			};
+			name = Debug;
+		};
+		1DEB916608733D950010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_DISTRO = "";
+				APPLICATION_NAME = "";
+				APPLICATION_VERSION = "1.0 alpha 1";
+				APP_NAME_FOR_SCRIPTS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BOOST_INCLUDE_PATH = "\"$(BoostInstallationBase)\"/include/boost-$(BOOST_VERSION)";
+				BOOST_LIB_PATH = "\"$(BoostInstallationBase)\"/lib/";
+				BOOST_VERSION = 1_42;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/$(APPLICATION_NAME).app/Contents/Frameworks",
+					"$(SDKROOT)/System/Library/Frameworks/",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(WX_PREPROCESSOR_DEFINITIONS)",
+					"wxUSE_SERVICE_DISCOVERY=1",
+					"WXGUITEST_IMPORTEXPORT=WXEXPORT",
+				);
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GMOCK_CPPFLAGS = "-isystem\"$(GMOCK)\"/include";
+				GMOCK_LDFLAGS = "-L$(gMockLibs)";
+				GTEST_CPPFLAGS = "-isystem\"$(GTEST)\"/include";
+				GTEST_LDFLAGS = "-L$(gTestLibs)";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../wxGuiTest/include",
+					"\"$(WXWIN_29)\"/include",
+					"\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-$(WX_VERSION)",
+					"\"$(WXWIN_29)\"/src",
+					"\"$(BOOST)\"/include/boost-$(BOOST_VERSION)",
+				);
+				HEADER_SEARCH_PATHS_QUOTED_FOR_PROJECT_1 = "\"$(SDKROOT)\"/usr/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib",
+					"$(BUILT_PRODUCTS_DIR)/$(APPLICATION_NAME).app/Contents/Frameworks",
+				);
+				LINKED_BOOST_LIBRARIES = "-lboost_system-xgcc811-mt-$(BOOST_VERSION) -lboost_wserialization-xgcc811-mt-$(BOOST_VERSION) -lboost_serialization-xgcc811-mt-$(BOOST_VERSION) -lboost_thread-xgcc811-mt-$(BOOST_VERSION)";
+				LINKED_GMOCK_LIBRARIES = "-lgmock";
+				LINKED_GTEST_LIBRARIES = "-lgtest";
+				LINKED_WX_LIBRARIES = "-lwx_osx_cocoau_adv-$(WX_VERSION) -lwx_osx_cocoau_aui-$(WX_VERSION) -lwx_osx_cocoau_core-$(WX_VERSION) -lwx_osx_cocoau_qa-$(WX_VERSION) -lwx_osx_cocoau_xrc-$(WX_VERSION) -lwx_osx_cocoau_html-$(WX_VERSION) -lwx_baseu_net-$(WX_VERSION) -lwx_baseu_xml-$(WX_VERSION) -lwx_baseu-$(WX_VERSION)";
+				ONLY_ACTIVE_ARCH = YES;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = NO;
+				"OPTIMIZATION_CFLAGS[arch=i386]" = "-O0";
+				"OPTIMIZATION_CFLAGS[arch=ppc]" = "-O0";
+				OPTIMIZATION_CPPFLAGS = "-fno-default-inline";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"$(OPTIMIZATION_CPPFLAGS)",
+					"$(WARNING_CPPFLAGS)",
+					"$(WX_CPPFLAGS)",
+					"-isystem",
+					"\"$(wxSD)\"/include",
+					"-isystem",
+					"\"$(BOOST_INCLUDE_PATH)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-Y,10",
+					"$(UNDEFINED_SYMBOLS)",
+					"$(WEAKLY_LINKED_FRAMEWORKS)",
+					"-L$(BOOST_LIB_PATH)",
+					"$(LINKED_BOOST_LIBRARIES)",
+					"$(WX_LDFLAGS)",
+					"-headerpad_max_install_names",
+					"-weak_reference_mismatches",
+					error,
+					"-dead_strip_dylibs",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				SHARED_PRECOMPS_DIR = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SVN = /sw/bin/svn;
+				UNDEFINED_SYMBOLS = "-undefined error";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../../../Common/src/wxYalta/ \"$(SRCROOT)\"/../../../Common/src/Base \"$(SRCROOT)\"/../../../Common/src/ \"$(SRCROOT)\"/../../../Common/src/Networking \"$(SRCROOT)\"/../../../Common/src";
+				WARNING_CPPFLAGS = "-Wstrict-null-sentinel -Wnon-virtual-dtor";
+				WEAKLY_LINKED_FRAMEWORKS = "";
+				WX_CPPFLAGS = "-isystem\"$(WXWIN_29)\"/include -isystem\"$(WXWIN_29)\"/contrib/include";
+				"WX_CPPFLAGS[arch=i386]" = "$(inherited) $(WX_EXTRA_CPPFLAGS) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
+				"WX_CPPFLAGS[arch=ppc]" = "$(inherited) $(WX_EXTRA_CPPFLAGS) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
+				WX_EXTRA_CPPFLAGS = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-$(WX_VERSION)";
+				WX_LDFLAGS = "$(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
+				WX_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS_DEFAULT) wxDEBUG_LEVEL=0";
+				WX_PREPROCESSOR_DEFINITIONS_DEFAULT = "__WXMAC__ _FILE_OFFSET_BITS=64 _LARGE_FILES WXUSINGDLL __WXOSX__  __WXOSX_COCOA__";
+				WX_VERSION = 2.9;
+				ZERO_LINK = NO;
+				wxSD = "\"$(SRCROOT)\"/../../../Common/src/Networking/servicediscovery";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB916008733D950010E9CD /* Build configuration list for PBXNativeTarget "wxGuiTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB916108733D950010E9CD /* Debug */,
+				1DEB916208733D950010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB916408733D950010E9CD /* Build configuration list for PBXProject "wxGuiTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB916508733D950010E9CD /* Debug */,
+				1DEB916608733D950010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

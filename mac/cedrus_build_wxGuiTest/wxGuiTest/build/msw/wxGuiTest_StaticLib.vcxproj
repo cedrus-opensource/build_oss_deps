@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0D66028B-FB35-4C90-929D-C953062A6960}</ProjectGuid>
+    <RootNamespace>wxGuiTest_StaticLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;$(wxwin_29)\include\msvc;$(wxwin_29)\lib\vc_dll_vc10\mswud;$(wxwin_29)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;WXGUITEST_IMPORTEXPORT=WXEXPORT;WXUSINGDLL;wxUSE_STD_DEFAULT=0;_USRDLL;WXGUITEST_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)wxGuiTest_StaticLib.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>unicows.lib;winmm.lib;libCppUnit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\built_libs\vs2010-debug;$(wxwin_29)\lib\vc_dll_vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;$(wxwin_29)\include\msvc;$(wxwin_29)\lib\vc_dll_vc10\mswu;$(wxwin_29)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;WXGUITEST_IMPORTEXPORT=WXEXPORT;WXUSINGDLL;wxUSE_STD_DEFAULT=0;_USRDLL;WXGUITEST_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>unicows.lib;winmm.lib;libCppUnit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\built_libs\vs2010-release;$(wxwin_29)\lib\vc_dll_vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\CapturePanel.cpp" />
+    <ClCompile Include="..\..\src\CppUnitWarningAsserter.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRAbstractTreeEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRButtonClickEvent.cpp" />
+    <ClCompile Include="..\..\src\CRCapture.cpp" />
+    <ClCompile Include="..\..\src\CRCaptureControl.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRCapturedEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRCheckBoxClickEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRChoiceSelectionEvent.cpp" />
+    <ClCompile Include="..\..\src\CRCppEmitter.cpp" />
+    <ClCompile Include="..\..\src\CREventCaptureManager.cpp" />
+    <ClCompile Include="..\..\src\CREventFactory.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRMenuSelectionEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRNotebookPageChangeEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRRadioBoxSelectionEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRSliderUpdateEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRSpinCtrlUpdateEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRTextUpdateEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRTreeItemRightClickEvent.cpp" />
+    <ClCompile Include="..\..\src\CapturedEvents\CRTreeSelectionChangingEvent.cpp" />
+    <ClCompile Include="..\..\src\CRWindowHierarchyHandler.cpp" />
+    <ClCompile Include="..\..\src\EventSimulationHelper.cpp" />
+    <ClCompile Include="..\..\src\InitWxGuiTest.cpp" />
+    <ClCompile Include="..\..\src\InitWxGuiTestSetUp.cpp" />
+    <ClCompile Include="..\..\src\ModalDialogTimer.cpp" />
+    <ClCompile Include="..\..\src\ProvokedWarning.cpp" />
+    <ClCompile Include="..\..\src\ProvokedWarningRegistry.cpp" />
+    <ClCompile Include="..\..\src\TempInteractive.cpp" />
+    <ClCompile Include="..\..\src\TempInteractiveControl.cpp" />
+    <ClCompile Include="..\..\src\TimedDialogEnder.cpp" />
+    <ClCompile Include="..\..\src\WxGuiTestApp.cpp" />
+    <ClCompile Include="..\..\src\WxGuiTestHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\wxGuiTest\Common.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CppUnitWarningAsserter.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRAbstractTreeEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRButtonClickEvent.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CRCapture.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CRCaptureControl.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRCapturedEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRCheckBoxClickEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRChoiceSelectionEvent.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CRCppEmitter.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CREventCaptureManager.h" />
+    <ClInclude Include="..\..\src\CREventFactory.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CREventFilterInterface.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CRLogInterface.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRMenuSelectionEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRNotebookPageChangeEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRRadioBoxSelectionEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRSliderUpdateEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRSpinCtrlUpdateEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRTextUpdateEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRTreeItemRightClickEvent.h" />
+    <ClInclude Include="..\..\src\CapturedEvents\CRTreeSelectionChangingEvent.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\CRWindowHierarchyHandler.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\EventSimulationHelper.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\InitWxGuiTest.h" />
+    <ClInclude Include="..\..\src\InitWxGuiTestSetUp.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\ModalDialogInteractionInterface.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\ModalDialogTimer.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\ProvokedWarning.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\ProvokedWarningRegistry.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\TempInteractive.h" />
+    <ClInclude Include="..\..\src\TempInteractiveControl.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\TimedDialogEnder.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\WarningAsserterInterface.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\WxGuiTestApp.h" />
+    <ClInclude Include="..\..\include\wxGuiTest\WxGuiTestHelper.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
