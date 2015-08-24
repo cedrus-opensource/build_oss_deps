@@ -17349,7 +17349,8 @@ fi
 #====================================================================================
 # Check for Ogg, Vorbis and FLAC.
 
-HAVE_EXTERNAL_LIBS=0
+# Next line is a Cedrus change. Force HAVE_EXTERNAL_LIBS:
+HAVE_EXTERNAL_LIBS=1
 EXTERNAL_CFLAGS=""
 EXTERNAL_LIBS=""
 
@@ -17779,6 +17780,12 @@ $as_echo "$as_me: WARNING: *** are an all or nothing affair." >&2;}
 		fi
 	fi
 
+
+# Next four lines are Cedrus additions. Force HAVE_EXTERNAL_LIBS:
+HAVE_EXTERNAL_LIBS=1
+enable_external_libs=yes
+EXTERNAL_CFLAGS="$FLAC_CFLAGS $OGG_CFLAGS $VORBIS_CFLAGS $VORBISENC_CFLAGS"
+EXTERNAL_LIBS="$FLAC_LIBS $OGG_LIBS $VORBIS_LIBS $VORBISENC_LIBS"
 
 cat >>confdefs.h <<_ACEOF
 #define HAVE_EXTERNAL_LIBS $HAVE_EXTERNAL_LIBS
@@ -21574,3 +21581,52 @@ if test x$prefix != "x/usr" ; then
 
 (cd src && make genfiles)
 (cd tests && make genfiles)
+
+echo "value for CC:"
+echo $CC
+
+echo "value for CXX:"
+echo $CXX
+
+echo "value for LDFLAGS:"
+echo $LDFLAGS
+
+echo "value for CXXFLAGS:"
+echo $CXXFLAGS
+
+echo "value for CFLAGS:"
+echo $CFLAGS
+
+echo "value for CPPFLAGS:"
+echo $CPPFLAGS
+
+echo "value for FLAC_CFLAGS:"
+echo $FLAC_CFLAGS
+
+echo "value for FLAC_LIBS:"
+echo $FLAC_LIBS
+
+echo "value for OGG_CFLAGS:"
+echo $OGG_CFLAGS
+
+echo "value for OGG_LIBS:"
+echo $OGG_LIBS
+
+echo "value for VORBIS_CFLAGS:"
+echo $VORBIS_CFLAGS
+
+echo "value for VORBIS_LIBS:"
+echo $VORBIS_LIBS
+
+echo "value for VORBISENC_CFLAGS:"
+echo $VORBISENC_CFLAGS
+
+echo "value for VORBISENC_LIBS:"
+echo $VORBISENC_LIBS
+
+echo "value for EXTERNAL_CFLAGS:"
+echo $EXTERNAL_CFLAGS
+
+echo "value for EXTERNAL_LIBS:"
+echo $EXTERNAL_LIBS
+
