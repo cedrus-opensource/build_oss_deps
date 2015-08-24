@@ -45,6 +45,7 @@
 
 #include "portaudio.h"
 
+#include <CoreAudio/AudioHardware.h>
 #include <AudioUnit/AudioUnit.h>
 //#include <AudioToolbox/AudioToolbox.h>
 
