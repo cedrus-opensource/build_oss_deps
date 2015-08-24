@@ -98,4 +98,13 @@ ced_py_utils.exec_command_using_given_cwd(
 shutil.copy2(sndfile_binaries_dir + '/tmp/sndfile/src/sndfile.h',
              sndfile_binaries_dir + '/include/mac/libsndfile-1.0.24/')
 
+shutil.copy2(flac_lib_dir + '/libFLAC.8.dylib', sndfile_binaries_dir + '/lib/')
+shutil.copy2(ogg_lib_dir + '/libogg.0.dylib', sndfile_binaries_dir + '/lib/')
+shutil.copy2(vorbis_lib_dir + '/libvorbis.0.dylib',
+             sndfile_binaries_dir + '/lib/')
+shutil.copy2(vorbis_lib_dir + '/libvorbisenc.2.dylib',
+             sndfile_binaries_dir + '/lib/')
+shutil.copy2(vorbis_lib_dir + '/libvorbisfile.3.dylib',
+             sndfile_binaries_dir + '/lib/')
+
 print("reached the end of cedrus_build_libsndfile.py")
