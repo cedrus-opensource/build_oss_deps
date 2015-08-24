@@ -92,7 +92,7 @@ shutil.copy2(
     sndfile_binaries_dir + '/lib/')
 
 ced_py_utils.exec_command_using_given_cwd(
-    'install_name_tool -id @executable_path/../libsndfile.1.dylib libsndfile.1.dylib',
+    'install_name_tool -id @executable_path/../Frameworks/libsndfile.1.dylib libsndfile.1.dylib',
     sndfile_binaries_dir + '/lib/')
 
 shutil.copy2(sndfile_binaries_dir + '/tmp/sndfile/src/sndfile.h',
