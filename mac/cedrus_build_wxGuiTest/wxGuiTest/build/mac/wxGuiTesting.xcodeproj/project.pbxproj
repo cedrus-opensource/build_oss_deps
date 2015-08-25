@@ -466,7 +466,7 @@
 				APPLICATION_NAME = "";
 				APPLICATION_VERSION = "1.0 alpha 1";
 				APP_NAME_FOR_SCRIPTS = "";
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+			    ARCHS = "x86_64";
 				BOOST_INCLUDE_PATH = "\"$(BoostInstallationBase)\"/include/boost-$(BOOST_VERSION)";
 				BOOST_LIB_PATH = "\"$(BoostInstallationBase)\"/lib/";
 				BOOST_VERSION = 1_42;
@@ -491,8 +491,9 @@
 				GTEST_LDFLAGS = "-L$(gTestLibs)";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../wxGuiTest/include",
-					"\"$(WXWIN_29)\"/include",
-					"\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-$(WX_VERSION)",
+				    "$(SRCROOT)/../../../cppunit-1.13.2/include",
+					"\"$(WXWIN_29)\"/built_libs/include/wx-3.0",
+				    "\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-3.0",
 					"\"$(WXWIN_29)\"/src",
 					"\"$(BOOST)\"/include/boost-$(BOOST_VERSION)",
 				);
@@ -504,11 +505,10 @@
 				LINKED_BOOST_LIBRARIES = "-lboost_system-xgcc811-mt-$(BOOST_VERSION) -lboost_wserialization-xgcc811-mt-$(BOOST_VERSION) -lboost_serialization-xgcc811-mt-$(BOOST_VERSION) -lboost_thread-xgcc811-mt-$(BOOST_VERSION)";
 				LINKED_GMOCK_LIBRARIES = "-lgmock";
 				LINKED_GTEST_LIBRARIES = "-lgtest";
-				LINKED_WX_LIBRARIES = "-lwx_osx_cocoaud_adv-$(WX_VERSION) -lwx_osx_cocoaud_aui-$(WX_VERSION) -lwx_osx_cocoaud_core-$(WX_VERSION) -lwx_osx_cocoaud_qa-$(WX_VERSION) -lwx_osx_cocoaud_xrc-$(WX_VERSION) -lwx_osx_cocoaud_html-$(WX_VERSION) -lwx_baseud_net-$(WX_VERSION) -lwx_baseud_xml-$(WX_VERSION) -lwx_baseud-$(WX_VERSION)";
+				LINKED_WX_LIBRARIES = "-lwx_osx_cocoaud_adv-3.0 -lwx_osx_cocoaud_aui-3.0 -lwx_osx_cocoaud_core-3.0 -lwx_osx_cocoaud_qa-3.0 -lwx_osx_cocoaud_xrc-3.0 -lwx_osx_cocoaud_html-3.0 -lwx_baseud_net-3.0 -lwx_baseud_xml-3.0 -lwx_baseud-3.0";
 				ONLY_ACTIVE_ARCH = YES;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = NO;
-				"OPTIMIZATION_CFLAGS[arch=i386]" = "-O0";
-				"OPTIMIZATION_CFLAGS[arch=ppc]" = "-O0";
+				"OPTIMIZATION_CFLAGS[arch=x86_64]" = "-O0";
 				OPTIMIZATION_CPPFLAGS = "-fno-default-inline";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -532,8 +532,7 @@
 					error,
 					"-dead_strip_dylibs",
 				);
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.7;
 				SHARED_PRECOMPS_DIR = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SVN = /sw/bin/svn;
@@ -541,11 +540,10 @@
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../../../Common/src/wxYalta/ \"$(SRCROOT)\"/../../../Common/src/Base \"$(SRCROOT)\"/../../../Common/src/ \"$(SRCROOT)\"/../../../Common/src/Networking \"$(SRCROOT)\"/../../../Common/src";
 				WARNING_CPPFLAGS = "-Wstrict-null-sentinel -Wnon-virtual-dtor";
 				WEAKLY_LINKED_FRAMEWORKS = "";
-				WX_CPPFLAGS = "-isystem\"$(WXWIN_29)\"/include -isystem\"$(WXWIN_29)\"/contrib/include";
-				"WX_CPPFLAGS[arch=i386]" = "$(inherited) $(WX_EXTRA_CPPFLAGS_DEBUG) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
-				"WX_CPPFLAGS[arch=ppc]" = "$(inherited) $(WX_EXTRA_CPPFLAGS_DEBUG) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
-				WX_EXTRA_CPPFLAGS_DEBUG = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-$(WX_VERSION)";
-				WX_LDFLAGS = "$(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
+				WX_CPPFLAGS = "-std=c++11 -stdlib=libc++  -isystem\"$(WXWIN_29)\"/built_libs/include/wx-3.0 -isystem\"$(WXWIN_29)\"/contrib/include";
+				"WX_CPPFLAGS[arch=x86_64]" = "$(inherited) $(WX_EXTRA_CPPFLAGS_DEBUG) -DMAC_OS_X_VERSION_MIN_REQUIRED=1070";
+			    WX_EXTRA_CPPFLAGS_DEBUG = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-3.0";
+				WX_LDFLAGS = "-stdlib=libc++ $(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
 				WX_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS_DEFAULT) wxDEBUG_LEVEL=0";
 				WX_PREPROCESSOR_DEFINITIONS_DEFAULT = "__WXMAC__ _FILE_OFFSET_BITS=64 _LARGE_FILES WXUSINGDLL __WXOSX__  __WXOSX_COCOA__";
 				WX_VERSION = 2.9;
@@ -562,7 +560,7 @@
 				APPLICATION_NAME = "";
 				APPLICATION_VERSION = "1.0 alpha 1";
 				APP_NAME_FOR_SCRIPTS = "";
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+			    ARCHS = "x86_64";
 				BOOST_INCLUDE_PATH = "\"$(BoostInstallationBase)\"/include/boost-$(BOOST_VERSION)";
 				BOOST_LIB_PATH = "\"$(BoostInstallationBase)\"/lib/";
 				BOOST_VERSION = 1_42;
@@ -586,9 +584,11 @@
 				GTEST_CPPFLAGS = "-isystem\"$(GTEST)\"/include";
 				GTEST_LDFLAGS = "-L$(gTestLibs)";
 				HEADER_SEARCH_PATHS = (
+				    "$(SRCROOT)/../../../cppunit-1.13.2/include",
+					"\"$(WXWIN_29)\"/built_libs/include/wx-3.0",
+				    "\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-3.0",
 					"$(SRCROOT)/../../../wxGuiTest/include",
-					"\"$(WXWIN_29)\"/include",
-					"\"$(WXWIN_29)\"/built_libs/lib/wx/include/osx_cocoa-unicode-$(WX_VERSION)",
+				    "\"$(WXWIN_29)\"/include/built_libs/include/wx-3.0",
 					"\"$(WXWIN_29)\"/src",
 					"\"$(BOOST)\"/include/boost-$(BOOST_VERSION)",
 				);
@@ -600,11 +600,10 @@
 				LINKED_BOOST_LIBRARIES = "-lboost_system-xgcc811-mt-$(BOOST_VERSION) -lboost_wserialization-xgcc811-mt-$(BOOST_VERSION) -lboost_serialization-xgcc811-mt-$(BOOST_VERSION) -lboost_thread-xgcc811-mt-$(BOOST_VERSION)";
 				LINKED_GMOCK_LIBRARIES = "-lgmock";
 				LINKED_GTEST_LIBRARIES = "-lgtest";
-				LINKED_WX_LIBRARIES = "-lwx_osx_cocoau_adv-$(WX_VERSION) -lwx_osx_cocoau_aui-$(WX_VERSION) -lwx_osx_cocoau_core-$(WX_VERSION) -lwx_osx_cocoau_qa-$(WX_VERSION) -lwx_osx_cocoau_xrc-$(WX_VERSION) -lwx_osx_cocoau_html-$(WX_VERSION) -lwx_baseu_net-$(WX_VERSION) -lwx_baseu_xml-$(WX_VERSION) -lwx_baseu-$(WX_VERSION)";
+				LINKED_WX_LIBRARIES = "-lwx_osx_cocoau_adv-3.0 -lwx_osx_cocoau_aui-3.0 -lwx_osx_cocoau_core-3.0 -lwx_osx_cocoau_qa-3.0 -lwx_osx_cocoau_xrc-3.0 -lwx_osx_cocoau_html-3.0 -lwx_baseu_net-3.0 -lwx_baseu_xml-3.0 -lwx_baseu-3.0";
 				ONLY_ACTIVE_ARCH = YES;
 				ONLY_LINK_ESSENTIAL_SYMBOLS = NO;
-				"OPTIMIZATION_CFLAGS[arch=i386]" = "-O0";
-				"OPTIMIZATION_CFLAGS[arch=ppc]" = "-O0";
+				"OPTIMIZATION_CFLAGS[arch=x86_64]" = "-O0";
 				OPTIMIZATION_CPPFLAGS = "-fno-default-inline";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -628,8 +627,7 @@
 					error,
 					"-dead_strip_dylibs",
 				);
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.7;
 				SHARED_PRECOMPS_DIR = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SVN = /sw/bin/svn;
@@ -637,11 +635,10 @@
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../../../Common/src/wxYalta/ \"$(SRCROOT)\"/../../../Common/src/Base \"$(SRCROOT)\"/../../../Common/src/ \"$(SRCROOT)\"/../../../Common/src/Networking \"$(SRCROOT)\"/../../../Common/src";
 				WARNING_CPPFLAGS = "-Wstrict-null-sentinel -Wnon-virtual-dtor";
 				WEAKLY_LINKED_FRAMEWORKS = "";
-				WX_CPPFLAGS = "-isystem\"$(WXWIN_29)\"/include -isystem\"$(WXWIN_29)\"/contrib/include";
-				"WX_CPPFLAGS[arch=i386]" = "$(inherited) $(WX_EXTRA_CPPFLAGS) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
-				"WX_CPPFLAGS[arch=ppc]" = "$(inherited) $(WX_EXTRA_CPPFLAGS) -DMAC_OS_X_VERSION_MIN_REQUIRED=1050";
-				WX_EXTRA_CPPFLAGS = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-$(WX_VERSION)";
-				WX_LDFLAGS = "$(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
+				WX_CPPFLAGS = "-std=c++11 -stdlib=libc++  -isystem\"$(WXWIN_29)\"/built_libs/include/wx-3.0 -isystem\"$(WXWIN_29)\"/contrib/include";
+				"WX_CPPFLAGS[arch=x86_64]" = "$(inherited) $(WX_EXTRA_CPPFLAGS) -DMAC_OS_X_VERSION_MIN_REQUIRED=1070";
+			    WX_EXTRA_CPPFLAGS = "-isystem$(WXWIN_29)/built_libs/lib//wx/include/osx_cocoa-unicode-3.0";
+				WX_LDFLAGS = "-stdlib=libc++  $(LINKED_WX_LIBRARIES) -L$(WXWIN_29)/built_libs/lib";
 				WX_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS_DEFAULT) wxDEBUG_LEVEL=0";
 				WX_PREPROCESSOR_DEFINITIONS_DEFAULT = "__WXMAC__ _FILE_OFFSET_BITS=64 _LARGE_FILES WXUSINGDLL __WXOSX__  __WXOSX_COCOA__";
 				WX_VERSION = 2.9;
