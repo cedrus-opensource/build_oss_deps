@@ -1,0 +1,7 @@
+# what follows is the command line that worked for me.
+# (some of the settings are superfluous. sorry. i started from the configure that we use for portaudio.)
+
+# IMPORTANT: the part about '-stdlib=libc++' was NOT COOPERATING until i made it part of the CXX (clang++) invocation.
+#    (in other words, it was NOT effective to put '-stdlib=libc++' in CXXFLAGS and LDFLAGS. it HAD to go in CXX)
+
+./configure  CC="clang -v -Wno-deprecated-declarations -Wno-newline-eof"  CXX="clang++ -v -stdlib=libc++ -std=c++11 -stdlib=libc++ -mmacosx-version-min=10.7"  LDFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"   CXXFLAGS="-std=c++11 -stdlib=libc++ -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"    CFLAGS="-mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"    CPPFLAGS="-mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
