@@ -1,0 +1,65 @@
+diff --git a/src/osx/cocoa/stattext.mm b/src/osx/cocoa/stattext.mm
+index 832b319..b76c6a4 100644
+--- a/src/osx/cocoa/stattext.mm
++++ b/src/osx/cocoa/stattext.mm
+@@ -32,6 +32,7 @@
+ 
+ @interface wxNSStaticTextView : NSTextField
+ {
++    NSColor *m_textColor;
+ }
+ @end
+ 
+@@ -47,21 +48,35 @@
+     }
+ }
+ 
++- (void)dealloc
++{
++    [m_textColor release];
++    [super dealloc];
++}
++
+ - (void) setEnabled:(BOOL) flag 
+-{ 
++{
++    bool wasEnabled = [self isEnabled];
++
+     [super setEnabled: flag]; 
+     
+-    if (![self drawsBackground]) { 
+-        // Static text is drawn incorrectly when disabled. 
+-        // For an explanation, see 
+-        // http://www.cocoabuilder.com/archive/message/cocoa/2006/7/21/168028 
++    if (![self drawsBackground]) {
++        // Static text is drawn incorrectly when disabled.
++        // For an explanation, see
++        // http://www.cocoabuilder.com/archive/message/cocoa/2006/7/21/168028
+         if (flag)
+         { 
+-            [self setTextColor: [NSColor controlTextColor]]; 
++            if (m_textColor)
++                [self setTextColor: m_textColor];
+         }
+         else 
+-        { 
+-            [self setTextColor: [NSColor secondarySelectedControlColor]]; 
++        {
++            if (wasEnabled)
++            {
++                [m_textColor release];
++                m_textColor = [[self textColor] retain];
++            }
++            [self setTextColor: [NSColor disabledControlTextColor]]; 
+         } 
+     } 
+ } 
+@@ -140,7 +155,7 @@ wxWidgetImplType* wxWidgetImpl::CreateStaticText( wxWindowMac* wxpeer,
+     [v setBezeled:NO];
+     [v setBordered:NO];
+ 
+-    NSLineBreakMode linebreak = NSLineBreakByWordWrapping;
++    NSLineBreakMode linebreak = NSLineBreakByClipping; // was NSLineBreakByWordWrapping in prior rev.
+     if ( ((wxStaticText*)wxpeer)->IsEllipsized() )
+     {
+         if ( style & wxST_ELLIPSIZE_MIDDLE )
