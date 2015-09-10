@@ -26,6 +26,10 @@ cedrus_dylib_script = os.path.abspath(
     os.getcwd() + '/cedrus_build_wx/cedrus_wx_mach-o_dylib_fixer.sh')
 cedrus_wx_patch = os.path.abspath(
     os.getcwd() + '/cedrus_build_wx/cedrus_patch_for_wx_v3.0.2.patch')
+cedrus_wx_patch2 = os.path.abspath(
+    os.getcwd() + '/cedrus_build_wx/fix_from_http_trac.wxwidgets.org_changeset_78144.patch')
+cedrus_wx_patch3 = os.path.abspath(
+    os.getcwd() + '/cedrus_build_wx/cedrus_patch_for_less_wxStackWalker.patch')
 
 # First section:  do a bunch of sanity-checking
 ced_py_utils.verify_that_CWD_is_the_enclosing_folder_of_this_script()
@@ -41,10 +45,16 @@ ced_py_utils.git_repo_checkout_revision(wx_src_dir, '2d853161ef87fe623')
 shutil.copy2(cedrus_build_script, wx_src_dir)
 shutil.copy2(cedrus_dylib_script, wx_src_dir)
 shutil.copy2(cedrus_wx_patch, wx_src_dir)
+shutil.copy2(cedrus_wx_patch2, wx_src_dir)
+shutil.copy2(cedrus_wx_patch3, wx_src_dir)
 
 # if applying the patch FAILS, it could just mean that you already applied it. reset to a clean revision and try again.
 ced_py_utils.git_repo_apply_patch(wx_src_dir,
                                   'cedrus_patch_for_wx_v3.0.2.patch')
+ced_py_utils.git_repo_apply_patch(wx_src_dir,
+                                  'fix_from_http_trac.wxwidgets.org_changeset_78144.patch')
+ced_py_utils.git_repo_apply_patch(wx_src_dir,
+                                  'cedrus_patch_for_less_wxStackWalker.patch')
 
 ced_py_utils.exec_command_using_given_cwd('./cedrus_build_wx.sh', wx_src_dir)
 
