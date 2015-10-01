@@ -858,3 +858,20 @@ index 0000000..aa7561a
 +}
 +
 +#endif // wxOSX_USE_COCOA_OR_CARBON
+diff --git a/src/osx/cocoa/utils.mm b/src/osx/cocoa/utils.mm
+index 02843c8..45e8f89 100644
+--- a/src/osx/cocoa/utils.mm
++++ b/src/osx/cocoa/utils.mm
+@@ -224,6 +224,12 @@ void wxBell()
+         wxTheApp->SetActive( false , NULL ) ;
+ }
+ 
++// for national instruments NI-DAQmx_Base_14.0.0 see: http://stackoverflow.com/questions/26674256/nidaqmx-yosemite-compatibility/32624881
++- (id)setHandler:(id)a withData:(id) b
++{
++        return nil;
++}
++
+ @end
+ 
+ /*
