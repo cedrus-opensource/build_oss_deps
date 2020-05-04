@@ -64,8 +64,8 @@ then
 		then
 			echo "      --- Fixing install name id on $OUTER_LOOP_LIB_FILENAME_BASENAME --- "
 			
-			SHORT_OUTER_LOOP_LIB_FILENAME=`echo ${OUTER_LOOP_LIB_FILENAME_BASENAME/.0.2.0/}`
-			install_name_tool -id "@executable_path/$SHORT_OUTER_LOOP_LIB_FILENAME" "$OUTER_LOOP_LIB_FILENAME"
+			SHORT_OUTER_LOOP_LIB_FILENAME=`echo ${OUTER_LOOP_LIB_FILENAME_BASENAME/.0.4.0/}`
+			install_name_tool -id "@rpath/$SHORT_OUTER_LOOP_LIB_FILENAME" "$OUTER_LOOP_LIB_FILENAME"
 		fi
 		
 		
@@ -103,9 +103,9 @@ then
 				
 						echo "           --- Inside $OUTER_LOOP_LIB_FILENAME_BASENAME found $FOUND_LINK. Proceeding to fix this Mach-O rel-path --- "
 				
-						SHORT_INNER_LOOP_LIB_FILENAME=`echo ${INNER_LOOP_LIB_FILENAME_BASENAME/.0.2.0/}`
+						SHORT_INNER_LOOP_LIB_FILENAME=`echo ${INNER_LOOP_LIB_FILENAME_BASENAME/.0.4.0/}`
 				
-						install_name_tool -change "$FOUND_LINK" "@executable_path/$SHORT_INNER_LOOP_LIB_FILENAME" "$OUTER_LOOP_LIB_FILENAME"
+						install_name_tool -change "$FOUND_LINK" "@rpath/$SHORT_INNER_LOOP_LIB_FILENAME" "$OUTER_LOOP_LIB_FILENAME"
 				fi
 			done # done with "Portion Two", the Inner Loop
 		

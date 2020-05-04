@@ -23,7 +23,7 @@ portaudio_binaries_dir = os.path.abspath(
 portaudio_conf_tmp_dir = portaudio_binaries_dir + os.path.sep + 'tmp' + os.path.sep + 'portaudio'
 
 # this next path is INTENTIONALLY a relative path. (not absolute path)
-relpath_to_reach_portaudio_src_from_our_output_dir = '../../../build_oss_deps/mac/cedrus_build_snd_and_paudio/pa_stable_v19_20110326/'
+relpath_to_reach_portaudio_src_from_our_output_dir = '../../../build_oss_deps/mac/cedrus_build_snd_and_paudio/pa_stable_v190600_20161030/'
 
 # First section:  do a bunch of sanity-checking
 ced_py_utils.verify_that_CWD_is_the_enclosing_folder_of_this_script()
@@ -37,10 +37,10 @@ ced_py_utils.enforce_dir_exists(portaudio_binaries_dir)
 conf_cmd = relpath_to_reach_portaudio_src_from_our_output_dir + os.path.sep + 'configure '
 conf_cmd += ' CC="clang -v -Wno-deprecated-declarations -Wno-newline-eof" '
 conf_cmd += ' CXX=clang++ '
-conf_cmd += ' LDFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"  '
-conf_cmd += ' CXXFLAGS="-std=c++11 -stdlib=libc++ -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"   '
-conf_cmd += ' CFLAGS="-mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"   '
-conf_cmd += ' CPPFLAGS="-mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk" '
+conf_cmd += ' LDFLAGS="-stdlib=libc++ -mmacosx-version-min=10.11 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk"  '
+conf_cmd += ' CXXFLAGS="-std=c++11 -stdlib=libc++ -mmacosx-version-min=10.11 -DMAC_OS_X_VERSION_MIN_REQUIRED=101100 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk"   '
+conf_cmd += ' CFLAGS="-mmacosx-version-min=10.11 -DMAC_OS_X_VERSION_MIN_REQUIRED=101100 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk"   '
+conf_cmd += ' CPPFLAGS="-mmacosx-version-min=10.11 -DMAC_OS_X_VERSION_MIN_REQUIRED=101100 -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk" '
 
 conf_cmd += ' --enable-shared --disable-static '
 
@@ -66,6 +66,6 @@ ced_py_utils.exec_command_using_given_cwd(
     portaudio_binaries_dir + '/lib/')
 
 shutil.copy2(portaudio_binaries_dir + '/tmp/include/portaudio.h',
-             portaudio_binaries_dir + '/include/mac/pa_stable_v19_20110326/')
+             portaudio_binaries_dir + '/include/mac/pa_stable_v190600_20161030/')
 
 print("reached the end of cedrus_build_portaudio.py")

@@ -13,9 +13,9 @@ ExportToEnvironment()
 
 NUM_PARALLEL_JOBS=4
 
-SDK_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
+SDK_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk"
 
-DEPLOYMENT_TARGET="10.7"
+DEPLOYMENT_TARGET="10.13"
 
 CPPFLAGS_ARCH="-arch x86_64"
 
@@ -25,8 +25,8 @@ LDFLAGS_common=" -stdlib=libc++ -arch x86_64 -mmacosx-version-min=${DEPLOYMENT_T
 CPPFLAGS_common="  -fvisibility-inlines-hidden \
 -fno-strict-aliasing \
 -mmacosx-version-min=${DEPLOYMENT_TARGET} \
--DMAC_OS_X_VERSION_MIN_REQUIRED=1070 \
--DMAC_OS_X_DEPLOYMENT_TARGET=1070 \
+-DMAC_OS_X_VERSION_MIN_REQUIRED=101100 \
+-DMAC_OS_X_DEPLOYMENT_TARGET=101300 \
 -isysroot ${SDK_PATH}"
 
 CONFIGURE_FLAGS=" \
